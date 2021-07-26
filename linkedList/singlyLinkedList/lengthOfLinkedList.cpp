@@ -40,7 +40,7 @@ int listlength(Node *head)
 {
     Node *current=head;
     int cnt=0;
-    while(current->next!=NULL)
+    while(current!=NULL)
     {
         cnt++;
         current=current->next;
@@ -67,7 +67,7 @@ int main()
     cout<<endl;
 
     int cnt=listlength(head);
-    cout<<cnt+1;
+    cout<<cnt;
   
     return 0;
 }
