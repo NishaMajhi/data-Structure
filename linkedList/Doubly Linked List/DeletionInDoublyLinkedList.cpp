@@ -72,7 +72,8 @@ void deletionInLinkedList(Node* &head,Node* &tail,int pos)
         }
 
         prev->next = cur->next;
-        cur->next = NULL;
+        cur->next->prev = prev;
+        cur->next = cur->prev = NULL;
         cout << "deleted element = " << cur->data << endl;
         delete cur;
     }
