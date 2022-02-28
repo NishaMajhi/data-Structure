@@ -20,22 +20,20 @@ Node *create(int d)
     return newNode;
 }
 
-void print(Node *&head)
+void print(Node *head)
 {
-    if (head == NULL)
-    {
-        cout << "List is empty" << endl;
-        return;
-    }
-
     cout << "data of linked list : ";
     Node *temp = head;
-    while (temp != NULL)
+    if (head != NULL)
     {
-        cout << temp->data << " ";
-        temp = temp->next;
+        do
+        {
+            cout << temp->data << " ";
+            temp = temp->next;
+        } while (temp != head);
+
+        cout << endl;
     }
-    cout << endl;
 }
 
 void push(Node *&head, Node *&tail, int d)
