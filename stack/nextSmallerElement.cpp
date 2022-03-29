@@ -1,4 +1,4 @@
-// find next greater element in the array
+// find next smallest element for all the element of array
 #include <bits/stdc++.h>
 using namespace std;
 
