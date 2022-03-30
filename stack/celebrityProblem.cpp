@@ -22,7 +22,7 @@ int celebrity(vector<vector<int>> &v, int n)
         {
             int x = knows(v, i, j);
             zeroCount[i] += x;
-            oneCount[i] += x;
+            oneCount[j] += x;
         }
     }
 
