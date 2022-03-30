@@ -1,9 +1,41 @@
-/*A celebrity is a person who is known to all but does not know anyone at a party. 
-If you go to a party of N people, find if there is a celebrity in the party or not.
-A square NxN matrix M[][] is used to represent people at the party such that if an element of row i and column j  is set to 1 it means ith person knows jth person.
-Here M[i][i] will always be 0.
-Note: Follow 0 based indexing.*/
+/*
+A celebrity is a person who is known to all but does not know anyone at a party. If you go to a party of N people, find if there is a celebrity in the party or not.
+A square NxN matrix M[][] is used to represent people at the party such that if an element of row i and column j  is set to 1 it means ith person knows jth person. Here M[i][i] will always be 0.
+Note: Follow 0 based indexing.
+*/
+#include <bits/stdc++.h>
+using namespace std;
 
+/*
+// Approach 1 - T.C-O(n^2) S.C-O(n)
+bool knows(vector<vector<int>> v, int a, int b)
+{
+    return v[a][b];
+}
+int celebrity(vector<vector<int>> &v, int n)
+{
+    int zeroCount[n] = {0};
+    int oneCount[n] = {0};
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            int x = knows(v, i, j);
+            zeroCount[i] += x;
+            oneCount[i] += x;
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if ((zeroCount[i] == 0) && ( oneCount[i] = n - 1))
+            return i;
+    }
+
+    return -1;
+}*/
+
+//Approach 2 T.C = S.C = O(n)
 int celebrity(vector<vector<int> >& M, int n) 
     {
         stack<int> s;
@@ -50,6 +82,52 @@ int celebrity(vector<vector<int> >& M, int n)
         //step 5 return answer
         return ans;
     }
+
+/*
+// Approach 3 T.C-O(n) S.C-O(1)
+int celebrity(vector<vector<int>> v, int n)
+{
+    int i = 0, j = n - 1;
+    while (i < j)
+    {
+        if (v[j][i] == 1) // j know i
+            j--;
+        else // j does not know i
+            i++;
+    }
+    int candidate = i;
+    for (int i = 0; i < n; i++)
+    {
+        if (i != candidate)
+        {
+            if (v[candidate][i] == 1 || v[i][candidate] == 0)
+                return -1;
+        }
+    }
+    return candidate;
+}
+*/
+int main()
+{
+    vector<vector<int>> v;
+    int n;
+    cout << "enter vector size : ";
+    cin >> n;
+    cout << "enter " << n * n << " data" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        vector<int> t;
+        for (int j = 0; j < n; j++)
+        {
+            int x;
+            cin >> x;
+            t.push_back(x);
+        }
+        v.push_back(t);
+    }
+
+    cout << "celebrity : " << celebrity(v, n);
+}
 
 /*
 output-------
