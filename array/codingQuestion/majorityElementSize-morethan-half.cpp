@@ -30,5 +30,20 @@ public:
         }
 
         return candidate;
+        
+        
+        
+        
+       // unordered_map<int,int> mp;
+        // vector<int> ans;
+        // int size = nums.size();
+        // for(int i=0;i<size;i++){
+        //    mp[nums[i]]++; 
+        // }
+        // for(auto it=mp.begin();it!=mp.end();it++){
+        //     if((*it).second > (size/2))
+        //         ans.push_back((*it).first);
+        // }
+        // return ans;
     }
 }
