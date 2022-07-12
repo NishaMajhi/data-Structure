@@ -6,7 +6,6 @@ What is an inversion of an array? Definition: for all i & j < size of array, if 
 Example 1:
 
 Input Format: N = 5, array[] = {1,2,3,4,5}
-
 Result: 0
 
 Explanation: we have a sorted array and the sorted array 
@@ -19,7 +18,6 @@ inversion.
 Example 2:
 
 Input Format: N = 5, array[] = {5,4,3,2,1}
-
 Result: 10
 
 Explanation: we have a reverse sorted array and we will 
