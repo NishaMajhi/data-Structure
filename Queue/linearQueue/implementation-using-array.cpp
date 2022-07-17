@@ -105,5 +105,6 @@ void display(int arr[],int *f,int *r)
                 cout<<endl<<"invalid choice : "<<endl<<endl;
         }
     }while(choice!=0);
+      
     return 0;
 }
