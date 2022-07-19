@@ -1,3 +1,63 @@
+/*
+Given the head of a singly linked list, return true if it is a palindrome.
+ 
+Example 1:
+
+Input: head = [1,2,2,1]
+Output: true
+
+
+Example 2:
+
+Input: head = [1,2]
+Output: false
+
+Constraints:
+
+The number of nodes in the list is in the range [1, 105].
+0 <= Node.val <= 9
+
+*/
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        
+        //approach 1 t.c=s.c=O(n)
+        //create a vector to store LL data
+        vector<int> v;
+        
+        ListNode *temp = head;
+        
+        //store the data of LL in vector
+        while(temp != NULL){
+            v.push_back(temp->val);
+            temp = temp->next;
+        }
+        //traverse the vector to check palindrom
+        int i = 0,j = v.size()-1;
+        while(i<=j){
+            if(v[i] != v[j])
+                return false;
+            i++;
+            j--;
+        }
+        
+        return true;
+    }
+};
+
+
 // find  Linked List  is palindrom or not
 #include <iostream>
 using namespace std;
@@ -71,6 +131,7 @@ Node *getMid(Node *head)
     return slow;
 }
 
+//approach 2 t.c=O(n) s.c=O(1)
 bool palindrom(Node *head)
 { 
     if(head->next == NULL)
