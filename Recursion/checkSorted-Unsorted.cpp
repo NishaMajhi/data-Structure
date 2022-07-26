@@ -1,5 +1,21 @@
 // check whether the array is sorted or not
 
+
+/*
+example 1:
+5
+1 2 3 4 5
+1
+
+
+example 2:
+5
+1 3 2 4 5
+0
+
+*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
