@@ -1,5 +1,23 @@
-// find all the set of input array;
+// find all the subset of input array;
 
+
+/*
+example 1:
+enter size : 3
+1 2 3
+
+3
+2
+2 3
+1
+1 3
+1 2
+1 2 3
+count of total subset : 8
+
+*
+
+/
 #include <bits/stdc++.h>
 using namespace std;
 
