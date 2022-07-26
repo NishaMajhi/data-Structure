@@ -1,5 +1,19 @@
 // print spelling of given number
 
+/*
+example 1:
+
+enter number : 435678
+four three five six seven eight 
+
+
+example 2:
+
+enter number : 3400
+three four zero zero 
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
