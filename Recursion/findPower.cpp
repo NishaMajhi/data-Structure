@@ -1,11 +1,15 @@
-// find power of any number  , any times times
+// find power of any positive integer number  , any positive integer times
 
 
 /*
 example 1:
+enter number and power : 5 3
+5 ki power 3 = 125  
 
-enter number : 3400
-three four zero zero 
+
+example 2:
+enter number and power : 7 5
+7 ki power 5 = 16807
 
 */
 
@@ -25,12 +29,13 @@ int myPow(int n, int p)
 
     // if answer is odd - e.g => 2^3 = 2^2(2*2) * 2^1
     if (p % 2 == 1)
-        return 2 * ans * ans;
+        return n * ans * ans;
 
     // even e.g => 2^4 = (2^2)^2
     else
         return ans * ans;
 }
+
 
 int myPowFunc(int n)
 {
