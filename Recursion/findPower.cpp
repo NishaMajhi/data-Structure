@@ -1,4 +1,14 @@
-// find power of 2 , n times
+// find power of any number  , any times times
+
+
+/*
+example 1:
+
+enter number : 3400
+three four zero zero 
+
+*/
+
 
 #include <bits/stdc++.h>
 using namespace std;
