@@ -1,3 +1,38 @@
+/*
+create a binary tree and traverse by reverse level order traversal(recursive/iterative)
+
+example:
+enter node data : 1
+
+enter data for left child of 1 : enter node data : 2
+
+enter data for left child of 2 : enter node data : 4
+
+enter data for left child of 4 : enter node data : -1
+
+enter data for right child of 4 : enter node data : -1
+
+enter data for right child of 2 : enter node data : 5
+
+enter data for left child of 5 : enter node data : -1
+
+enter data for right child of 5 : enter node data : -1
+
+enter data for right child of 1 : enter node data : 3
+
+enter data for left child of 3 : enter node data : -1
+
+enter data for right child of 3 : enter node data : 9
+
+enter data for left child of 9 : enter node data : -1
+
+enter data for right child of 9 : enter node data : -1
+Reverse Level order tarversal using Iterative approach 
+4 5 9 2 3 1
+Reverse Level order tarversal using Recursive approach
+4 5 9 2 3 1
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
