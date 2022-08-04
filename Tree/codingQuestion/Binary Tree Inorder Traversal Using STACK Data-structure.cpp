@@ -35,6 +35,44 @@ The number of nodes in the tree is in the range [0, 100].
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+
+//approach 1
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        
+        
+        vector<int> v;
+        if(root==NULL)
+            return v;
+        TreeNode *p=root;
+        stack<TreeNode* > s;
+        
+        while(!s.empty()||p)
+        {
+            if(p)
+            {
+                s.push(p);
+                p=p->left;
+            }
+            
+            else
+            {
+                TreeNode *t = s.top();
+                v.push_back(t->val);
+                s.pop();
+                p=t->right;
+            }
+        }
+        
+        return v;
+        
+        
+    }
+};
+
+//approach 2
 class Solution {
 public:
     
